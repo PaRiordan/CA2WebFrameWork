@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  h1=pageHeader.title
+  h2=pageHeader.strapline
+   .banner.div
+  .container 
+  row.banner
+      .col-12
+      h1 About Us
+        
+  
+  .row.align-self-center.w-8
+    .col-6
+  
+    
+      .card
+        .card-block
+            p write some bullshit about the company
+            p.address 125 High Street, Reading, RG6 1PS
+    .banner.div
+  .container
+  .col-12
+      h1 Recently Reviewed
+
+      .row
+       each review in RecentReviews
+        .card
+        .col-sm-4
+         .card-block
+          h4
+            a(href="/games")= review.gameName
+            small &nbsp;
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star-o
+              i.fa.fa-star-o
+              p= review.review
+                // put the paraggahs in a box??
+          a.btn.btn-primary.float-right(href='/location/review/new') Read review      
+          a.btn.btn-primary.float-right(href='/location/review/new') Add review
+        
+       

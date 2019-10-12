@@ -1,8 +1,20 @@
 const express = require('express');
 const router = express.Router();
 
-const ctrlMain = require('../controllers/main'); 
-/* GET home page. */
-router.get('/', ctrlMain.index); 
+const ctrlGames = require('../controllers/games');
+const ctrlOthers = require('../controllers/others'); 
+ 
+
+
+/* Review pages  */
+router.get('/', ctrlGames.home);
+router.get('/games', ctrlGames.gamesList);
+router.get('/games/review/addReview', ctrlGames.addReview);
+router.get('/games/review/read', ctrlGames.readReview);
+
+/* Other pages */
+router.get('/logIn', ctrlOthers.logIn);
+router.get('/register', ctrlOthers.register);
 module.exports = router;
+
 

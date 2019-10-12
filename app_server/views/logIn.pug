@@ -1,0 +1,30 @@
+extends layout
+
+block content
+ 
+ .col-sm-2
+ 
+ .card
+   .card.block
+   .col-sm-8
+    form
+      .form-group
+        label Enter email
+        input.form-control(name='' placeholder='Email' type='email')
+      //- form-group//
+      .form-group
+       
+        label Enter password
+        input.form-control(placeholder='******' type='password')
+      //- form-group//
+      .form-group
+        .checkbox
+          label
+            input(type='checkbox')
+            |  Save password
+        //- checkbox .//
+      //- form-group//
+      .form-group
+        button.btn.btn-primary.btn-block(type='submit')  Login  
+      //- form-group//
+    
