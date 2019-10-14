@@ -30,6 +30,7 @@ block content
          .card-block
           h4
             a(href="/games")= review.gameName
+            p
             small &nbsp;
               i.fa.fa-star
               i.fa.fa-star
@@ -38,7 +39,7 @@ block content
               i.fa.fa-star-o
               p= review.review
                 // put the paraggahs in a box??
-          a.btn.btn-primary.float-right(href='/location/review/new') Read review      
-          a.btn.btn-primary.float-right(href='/location/review/new') Add review
+          a.btn.btn-primary.float-right(href='/games/review/read') Read review      
+          a.btn.btn-primary.float-right(href='/games/review/addReview') Add review
         
        

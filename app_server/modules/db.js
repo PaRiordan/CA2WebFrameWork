@@ -10,7 +10,12 @@ mongoose.connection.on('connected', () => {
     console.log('Mongoose disconnected'); 
     });
 
-    const dbURI = 'mongodb://localhost/Riordan_Patrick_wf_project';
+    let dbURI = 'mongodb://localhost/Loc8r';
+if (process.env.NODE_ENV === 'production') {
+dbURI = process.env.MONGODB_URI;
+}
+
+        
     mongoose.connect (dbURI);
 
     const readLine = require ('readline');
