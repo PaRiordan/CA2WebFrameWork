@@ -10,7 +10,14 @@ mongoose.connection.on('connected', () => {
     console.log('Mongoose disconnected'); 
     });
 
-    let dbURI = 'mongodb://localhost/Loc8r';
+    var options = {
+        useMongoClient: true,
+        socketTimeoutMS: 0,
+        keepAlive: true,
+        reconnectTries: 30
+      };
+      
+    let dbURI = 'mongodb://127.0.0.1/Riordan_Patrick_wf_project';
 if (process.env.NODE_ENV === 'production') {
 dbURI = process.env.MONGODB_URI;
 }
