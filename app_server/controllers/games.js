@@ -29,7 +29,34 @@ res.render('home', { title:'Home - Game Reviews by Gamers',
 
 /* GET 'game info' page */
 const gamesList = function(req, res){
-res.render('games', { title: 'Games List' });
+res.render('games', { title: 'Games List' ,
+pageHeader: {
+    title: 'Home',
+    strapline: 'Game Reviews by Gamers'
+   },
+Reviews: [{
+       gameName: 'Fifa 19',
+       rating: '3',
+       review:'Great Game',
+     
+   
+
+   },
+   {
+       gameName: 'Read dead Redemption',
+       rating: '5',
+       review:'Super Game'
+
+   },
+   {
+       gameName: 'Rainbow Six Siege',
+       rating: '3',
+       review:'cracking Game'
+
+   }
+]
+   
+});
 };
 /* GET 'Add review' page */
 const addReview = function(req, res){

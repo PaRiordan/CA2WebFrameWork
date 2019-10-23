@@ -1,14 +1,21 @@
 extends layout
 
 block content
- .section.container
- .row
-    .col-sm-8
 
+            
+      
+  
+  .row
+  
+  
+    
+   each review in Reviews
+    .col-sm-4
       .card
         .card-block
+        
           h4
-            a(href="#") Fifa 19
+            a(href="/api/games")= review.gameName
             p
             small &nbsp;
               i.fa.fa-star
@@ -16,14 +23,14 @@ block content
               i.fa.fa-star
               i.fa.fa-star-o
               i.fa.fa-star-o
-              p great game
+              p= review.review
+               .col-12
+                img.card-img-top(src='/images/reddead.jpg' alt='Card image')
+       
+       
                 // put the paraggahs in a box??
-          a.btn.btn-primary.float-right(href='/location/review/') Read review      
+          a.btn.btn-primary.float-right(href='/games/review/read') Read review  
+          p     
           a.btn.btn-primary.float-right(href='/games/review/addReview') Add review
-    .col-sm-4
-          .card(style='width:200px')
-           .card.block
-           img.card-img-top(src='/images/reddead.jpg' alt='Card image')
-          .card-body
-          h4.card-title Read Dead Redemption
- 
+        h4
+            

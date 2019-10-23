@@ -11,18 +11,18 @@ router
   .post(ctrlGames.gamesCreate);
 
 router
-  .route('/games/:gamesId')
+  .route('/games/:gamesid')
   .get(ctrlGames.gamesReadOne)
   .put(ctrlGames.gamesUpdateOne)
   .delete(ctrlGames.gamesDeleteOne);
   
 // reviews
 router
-  .route('/games/:gamesId/reviews')
+  .route('/games/:gamesid/reviews')
   .post(ctrlReviews.reviewsCreate);
 
 router
-  .route('/games/:gamesid/reviews/addReview/:reviewId')
+  .route('/games/:gamesid/reviews/:reviewId')
   .get(ctrlReviews.reviewsReadOne)
   .put(ctrlReviews.reviewsUpdateOne)
   .delete(ctrlReviews.reviewsDeleteOne);

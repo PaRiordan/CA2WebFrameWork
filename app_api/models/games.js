@@ -1,14 +1,14 @@
+
 const mongoose = require('mongoose');
 
 const reviewSchema = new mongoose.Schema({
-    author: String,
     rating: {
         type: Number,
         required: Number,
         min: 0,
         max: 5
     },
-    reviewText: String,
+    reviewText: String
    
 })
 

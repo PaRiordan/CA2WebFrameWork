@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
-
+let dbURI = 'mongodb://127.0.0.1/Riordan_Patrick_wf_project';
 mongoose.connection.on('connected', () => { 
+    if (process.env.NODE_ENV === 'production') {
+        dbURI = process.env.MONGODB_URI;
+        }
+       
     console.log(`Mongoose connected to ${dbURI}`); 
     }); 
     mongoose.connection.on('error', err => { 
@@ -9,22 +13,15 @@ mongoose.connection.on('connected', () => {
     mongoose.connection.on('disconnected', () => { 
     console.log('Mongoose disconnected'); 
     });
-
-    var options = {
+   
+    const options = {
         useMongoClient: true,
         socketTimeoutMS: 0,
         keepAlive: true,
-        reconnectTries: 30
+        reconnectTries: 30,
       };
-      
-    let dbURI = 'mongodb://127.0.0.1/Riordan_Patrick_wf_project';
-if (process.env.NODE_ENV === 'production') {
-dbURI = process.env.MONGODB_URI;
-}
-
-        
-    mongoose.connect (dbURI);
-
+      mongoose.connect (dbURI,{useUnifiedTopology: true,
+        useNewUrlParser: true});
     const readLine = require ('readline');
     if (process.platform === 'win32'){
     const rl = readLine.createInterface ({

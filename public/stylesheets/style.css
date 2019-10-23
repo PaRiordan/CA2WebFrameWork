@@ -3,7 +3,7 @@
 body {
   font-family: "Cabin", Arial, sans-serif;
   color: #ffffff;
-  background-color: #108a93;
+  background-color:#ff4d17;
 
 }
 
@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar {
   background-color: #F3E9E7;
-  border-color: #911821;
+  border-color: #d1b4b6;
 }
 
 .navbar-brand {
@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .banner {
   margin-top: 2em;
-  border-bottom: 2px solid #469ea8;
+  border-bottom: 2px solid #022024;
   margin-bottom: 1.5em;
   padding-bottom: 0.5em;
 
@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .figure.row{
   background-color: red;
-  border-bottom: 2px solid #469ea8;
+  border: 2px solid #469ea8;
  
 }
 
@@ -58,13 +58,12 @@ h1 small {
 
 .card-block{
   text-align:  center;
- 
-  
-  border-bottom: 2px solid #469ea8;
+
+ border: 2px solid #022024;
 
 }
 .review-header {
-  background-color: #31727a;
+  background-color: #85ff27;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   margin-bottom: 0.5em;
@@ -84,6 +83,7 @@ h1 small {
 h4 a, h4 a:hover {
   color: #fff;
 }
+
 
 h4 small {
   font-size: 60%;
