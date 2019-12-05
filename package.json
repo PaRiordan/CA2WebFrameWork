@@ -17,7 +17,7 @@
     "flag": "^4.4.0",
     "font-awesome": "^4.7.0",
     "http-errors": "~1.6.3",
-    "mongoose": "^5.7.4",
+    "mongoose": "^5.7.5",
     "morgan": "~1.9.1",
     "nodemon": "^1.19.2",
     "process-env": "^1.1.0",
