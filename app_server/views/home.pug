@@ -21,18 +21,18 @@ block content
              | Suspendisse tincidunt, lectus non suscipit pharetra, purus ipsum vehicula sapien, a volutpat mauris ligula vel dui. Proin varius interdum elit, eu porttitor quam consequat et. Quisque vitae felis sed ante fringilla fermentum in vitae sem. Quisque fermentum metus at neque sagittis imperdiet. Phasellus non laoreet massa, eu laoreet nibh. Pellentesque vel magna vulputate, porta augue vel, dapibus nisl. Phasellus aliquet nibh nec nunc posuere fringilla. Quisque sit amet dignissim erat. Nulla facilisi. Donec in sollicitudin ante. Cras rhoncus accumsan rutrum. Sed aliquet ligula dui, eget laoreet turpis tempor vitae.
 
             
-    
-  .container
-  .col-12
+    block content
+  //- .container
+  //- .col-12
       h1 Recently Reviewed
-
+       p.name= games.gamesName
       .row
-       each review in RecentReviews
-        .card
+           //each games in games
+      .card
         .col-sm-4
          .card-block
           h4
-            a(href="/games")= review.gameName
+            //- a(href="/games")= review.gameName
             p
             small &nbsp;
               i.fa.fa-star
@@ -40,9 +40,7 @@ block content
               i.fa.fa-star
               i.fa.fa-star-o
               i.fa.fa-star-o
-              p= review.review
+              //- p= review.review
                 // put the paraggahs in a box??
           a.btn.btn-primary.float-right(href='/games/review/read') Read review      
-          a.btn.btn-primary.float-right(href='/games/review/addReview') Add review
-        
-       
+          a.btn.btn-primary.float-right(href='/games/:gamesid/review/addReview') Add review

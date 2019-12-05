@@ -8,8 +8,11 @@ const ctrlOthers = require('../controllers/others');
 
 /* Review pages  */
 router.get('/', ctrlGames.home);
-router.get('/games', ctrlGames.gamesList);
-router.get('/games/review/addReview', ctrlGames.addReview);
+router.get('/games/:gamesid', ctrlGames.gamesList);
+router
+.route('/games/:gamesid/review/addReview')
+.get(ctrlGames.addReview)
+.post(ctrlGames.doAddReview);
 router.get('/games/review/read', ctrlGames.readReview);
 
 /* Other pages */

@@ -22,7 +22,7 @@ router
   .post(ctrlReviews.reviewsCreate);
 
 router
-  .route('/games/:gamesid/reviews/:reviewId')
+  .route('/games/:gamesid/reviews/:reviewid')
   .get(ctrlReviews.reviewsReadOne)
   .put(ctrlReviews.reviewsUpdateOne)
   .delete(ctrlReviews.reviewsDeleteOne);

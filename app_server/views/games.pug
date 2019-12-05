@@ -1,14 +1,7 @@
 extends layout
 
 block content
-
-            
-      
-  
   .row
-  
-  
-    
    each review in Reviews
     .col-sm-4
       .card
@@ -31,6 +24,6 @@ block content
                 // put the paraggahs in a box??
           a.btn.btn-primary.float-right(href='/games/review/read') Read review  
           p     
-          a.btn.btn-primary.float-right(href='/games/review/addReview') Add review
+          a.btn.btn-primary.float-right(href='/games/:gamesid/review/addReview') Add review
         h4
             

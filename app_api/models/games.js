@@ -27,5 +27,5 @@ const gamesSchema = new mongoose.Schema({
     reviews: [reviewSchema]
  });
 
- mongoose.model('games', gamesSchema);
+ mongoose.model('Games', gamesSchema);
 
