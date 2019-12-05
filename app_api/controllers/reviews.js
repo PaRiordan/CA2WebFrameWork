@@ -13,7 +13,7 @@ const reviewsCreate = function(req, res) {
             .status(400)
             .json(err);
         } else {
-          _doAddReview(req, res, games);
+          _doAddReview(req, res, games);  // https://shielded-shore-51574.herokuapp.com/api/games/5dab4ff9807ba70fcc565a0f/reviews adds review to fifa 19
         }
       }
     );
@@ -66,6 +66,7 @@ const reviewsReadOne = function (req, res) {if (req.params && req.params.gamesid
             res
               .status(200)
               .json(response); //http://localhost:3000/api/games/5de714598884d0ceda476e89/reviews/5de7255cf535f90baca498db get works
+                                // https://shielded-shore-51574.herokuapp.com/api/games/5dab4ff9807ba70fcc565a0f/reviews/5de8916c9bdc420017267ee2 
           }
         } else {
           res

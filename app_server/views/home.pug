@@ -22,12 +22,14 @@ block content
 
             
     block content
-  //- .container
-  //- .col-12
+    .container
+    .col-12
       h1 Recently Reviewed
        p.name= games.gamesName
       .row
            //each games in games
+
+      app-game-list Loading
       .card
         .col-sm-4
          .card-block
@@ -43,4 +45,12 @@ block content
               //- p= review.review
                 // put the paraggahs in a box??
           a.btn.btn-primary.float-right(href='/games/review/read') Read review      
-          a.btn.btn-primary.float-right(href='/games/:gamesid/review/addReview') Add review
+          a.btn.btn-primary.float-right(href='/games/addReview') Add review
+
+  block scripts
+  script(src='/build/runtime-es5.edb2fcf2778e7bf1d426.js')
+  script(src='/build/polyfills-es5.ef4b1e1fc703b3ff76e3.js')
+  script(src='/build/main-es5.21fcf646d1d075183063.js')
+  script(src='/build/runtime-es2015.edb2fcf2778e7bf1d426.js')
+  script(src='/build/polyfills-es2015.2987770fde9daa1d8a2e.js')
+  script(src='/build/main-es2015.21fcf646d1d075183063.js')
